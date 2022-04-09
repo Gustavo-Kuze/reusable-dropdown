@@ -1,46 +1,50 @@
-# Getting Started with Create React App
+# Reusable React Dropdown Test
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A simple reusable React JS dropdown written with TypeScript.
 
-## Available Scripts
+____
 
-In the project directory, you can run:
+**NOTE**: This component has been developed for a coding challenge and is not production ready. 
 
-### `yarn start`
+Feel free to clone and modify this repository but keep in mind this **is not production ready code**.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+____
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
 
-### `yarn test`
+## Getting started
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+1. Install the project dependencies
 
-### `yarn build`
+```
+npm i
+```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+2. Start the project
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+```
+npm start
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Inspecting the code
 
-### `yarn eject`
+- The `Dropdown` component is located inside the components directory
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+```
+src\components\Dropdown\index.tsx
+```
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- The styling is being managed by the `styled-components` lib and you can find it in a file called `styledComponents.tsx` on each component folder
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+- Eslint and Prettier are configured in this project to ensure code quality
+- The `Dropdown` component is being instantiated at the `App` component as well as the loaded property values
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+## Some final thoughts
 
-## Learn More
+It would be much better to upload the `Dropdown` component as a npm module so It's easier to implement it in other React projects. But since this is a time limited coding challenge I decided to leave it inside the project structure.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+I actually have a React component library which I uploaded to NPM 3 years ago:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+[react-floating-action-button](https://www.npmjs.com/package/react-floating-action-button)
+
+And also I made a [full video](https://www.youtube.com/watch?v=TwLwSg_uMAY&ab_channel=Kuze) (in Portuguese) explaining how I did it 😉
+

@@ -1,23 +1,29 @@
-import React from 'react';
-import logo from './logo.svg';
+import { useState } from 'react';
 import './App.css';
+import Dropdown from './components/Dropdown';
+import MainContainer from './components/MainContainer';
 
 function App() {
+  const [isOpen, setIsOpen] = useState(false);
+  const [alignment, setAlignment] = useState<'left' | 'right'>('left');
+  const [items, setItems] = useState(['Rename', 'Delete', 'Share']);
+
   return (
-    <div className='App'>
-      <header className='App-header'>
-        <img src={logo} className='App-logo' alt='logo' />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className='App-link'
-          href='https://reactjs.org'
-          target='_blank'
-          rel='noopener noreferrer'
-        >
-          Learn React
-        </a>
+    <div className="App">
+      <header className="App-header">
+        <MainContainer>
+          <Dropdown
+            isOpen={isOpen}
+            align={alignment}
+            onToggle={(open) => setIsOpen(open)}
+            onItemClick={(item) => {
+              alert(`${item} clicked`);
+              setIsOpen(false);
+            }}
+            disabled={false}
+            items={items}
+          />
+        </MainContainer>
       </header>
     </div>
   );
