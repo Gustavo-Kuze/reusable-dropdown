@@ -2,6 +2,8 @@
 
 A simple reusable React JS dropdown written with TypeScript.
 
+**Demo**: https://reusable-dropdown.netlify.app
+
 ____
 
 **NOTE**: This component has been developed for a coding challenge and is not production ready. 
