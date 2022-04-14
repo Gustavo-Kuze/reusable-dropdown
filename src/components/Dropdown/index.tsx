@@ -41,7 +41,11 @@ const Dropdown: React.FC<Props> = ({
   }, []);
 
   return (
-    <Container className="dropdown-container" align={align}>
+    <Container
+      data-testid="dropdown"
+      className="dropdown-container"
+      align={align}
+    >
       <DropdownButtonStyle
         tabIndex={1}
         className="dropdown-button"

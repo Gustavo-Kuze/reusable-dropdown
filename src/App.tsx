@@ -18,7 +18,7 @@ function App() {
             onToggle={(open) => setIsOpen(open)}
             onItemClick={(item) => {
               alert(`${item} clicked`);
-              setIsOpen(false);
+              // setIsOpen(false);
             }}
             disabled={false}
             items={items}
